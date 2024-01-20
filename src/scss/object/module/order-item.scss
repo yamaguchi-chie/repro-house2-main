@@ -1,0 +1,67 @@
+@use "foundation" as *;
+
+.order-item--container {
+  max-width: prem(450);
+}
+
+/*-------------------------------
+main
+-------------------------------*/
+
+.order-item {
+  margin: auto;
+  max-width: prem(450);
+  @include mq('md') {
+    max-width: prem(500);
+  }
+}
+
+.order-item p {
+  text-align: center;
+}
+
+.order-item__title {
+  font-size: prem(24);
+  line-height: calc(32 / 24);
+  font-weight: $bold;
+  text-align: center;
+  @include mq("md") {
+    font-size: prem(36);
+    line-height: calc(48 / 36);
+  }
+}
+
+.order-item__text {
+  margin-top: prem(12);
+  font-size: prem(14);
+  line-height: calc(19 / 14);
+  font-weight: $regular;
+  @include mq("md") {
+    margin-top: prem(15);
+    font-size: prem(28);
+    line-height: calc(37 / 28);
+  }
+}
+
+.order-item__img {
+  width: 100%;
+}
+
+.order-item__img img {
+  width: 100%;
+  aspect-ratio: 450/395;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 500/440;
+  }
+}
+
+.order-item + .order-item {
+  @include mq("md") {
+    margin-top: prem(92);
+  }
+}
+
+.order-item__btn {
+  margin: auto;
+}

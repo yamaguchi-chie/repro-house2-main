@@ -1,0 +1,14 @@
+@use "foundation" as *;
+
+.layout-footer {
+  margin-top: prem(200);
+  @include mq('md') {
+  margin-top: prem(675);
+  }
+}
+
+.layout-footer--thanks {
+  @include mq('md') {
+  margin-top: prem(550);
+  }
+}

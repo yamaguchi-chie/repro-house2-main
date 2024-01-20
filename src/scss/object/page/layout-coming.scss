@@ -1,0 +1,7 @@
+@use "foundation" as *;
+
+.layout-coming {
+  @include mq('md') {
+  margin-top: prem(70);
+  }
+}

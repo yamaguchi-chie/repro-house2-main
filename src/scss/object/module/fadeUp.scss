@@ -1,0 +1,28 @@
+@use "foundation" as *;
+
+.js-fadeIn {
+  opacity: 0;
+}
+
+.active {
+  animation-name: fadeUpAnime;
+  animation-delay: 0.2s;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  @include mq('md') {
+    animation-delay: 0.2s;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,72 @@
+@use "foundation" as *;
+
+.designCode-example-content {
+  margin-top: prem(100);
+}
+
+.designCode-example__ImageText + .designCode-example__ImageText {
+  margin-top: prem(100);
+}
+
+.designCode-example__ImageText-wrap,
+.designCode-example__ImageText-wrap--reverse {
+  display: flex;
+  gap: prem(50);
+  @include mq('md') {
+  flex-direction: column-reverse;
+  }
+}
+
+.designCode-example__ImageText-wrap--reverse {
+  flex-direction: row-reverse;
+  @include mq('md') {
+  flex-direction: column-reverse;
+  }
+}
+
+.designCode-example__ImageText-text-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.designCode-example__ImageText-title {
+  font-size: prem(24);
+  line-height: calc(33 / 24);
+  font-weight: $bold;
+  @include mq('md') {
+    font-size: prem(36);
+  line-height: calc(50 / 36);
+
+  }
+}
+
+.designCode-example__ImageText-text {
+  margin-top: prem(22);
+	font-size: prem(16);
+	line-height: calc(28 / 16);
+	font-weight: $regular;
+  text-align: justify;
+  @include mq('md') {
+    font-size: prem(28);
+  line-height: calc(50 / 28);
+
+  }
+}
+
+.designCode-example__img {
+  width: prem(600);
+  flex-shrink: 0;
+  @include mq('md') {
+  width: 100%;
+  }
+}
+
+.designCode-example__img img {
+  width: 100%;
+  aspect-ratio: 600/400;
+  object-fit: cover;
+  @include mq('md') {
+  aspect-ratio: 630/400;
+  }
+}

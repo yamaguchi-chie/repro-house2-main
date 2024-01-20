@@ -1,0 +1,60 @@
+@use "sass:math";
+
+// ブレイクポイントの設定
+// ＊＊＊＊＊SP・PCファーストについて、この設定を変更します＊＊＊＊＊
+$break-flg: 1 !default; //0:SPファースト、1：PCファースト
+
+$breakpoints: null;
+@if $break-flg == 0 {
+  $breakpoints: (
+    "sm": "screen and (min-width: 400px)",
+    "md": "screen and (min-width: 768px)",
+    "lg": "screen and (min-width: 1000px)",
+    "xl": "screen and (min-width: 1200px)",
+  );
+} @else {
+  // ブレイクポイントの設定
+  $breakpoints: (
+    "sm": "screen and (max-width: 399px)",
+    "md": "screen and (max-width: 767px)",
+    "lg": "screen and (max-width: 999px)",
+    "xl": "screen and (max-width: 1199px)",
+  );
+}
+
+// inner
+$inner: 1366px;
+
+// 余白
+$padding-pc: 83px; // PC用余白設定
+$padding-sp: 25px; // スマホ用余白設定
+
+// フォント
+$NotoSans: 'Noto Sans', sans-serif;
+$YakuHanJP: YakuHanJP_Noto, "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// ベースフォントサイズ
+$base-font-size: 16px;
+
+// Color
+$black:#000;
+$grey1: #EBE6DF;
+$grey2: #F0F0F0;
+$grey3: #7C7C7C;
+$grey4: #707070;
+$grey5: #555;
+$grey6: #AAA;
+$green1: #5ECB00;
+$green2: #5DAD00;
+$green3: #02B439;
+$red: #D10000;
+$blue: #0334FF;
+$white: #fff;

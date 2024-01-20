@@ -1,0 +1,51 @@
+@use "foundation" as *;
+
+.contact-tab {
+  margin-top: prem(135);
+}
+
+.contact-tab__menu {
+  height: prem(105);
+  display: flex;
+  align-items: flex-end;
+  @include mq('md') {
+  margin: 0 calc((50vw - 50%) * -1);
+  }
+}
+
+.tab__menu-item {
+  width: 50%;
+  height: prem(100);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  font-weight: $bold;
+  color: $white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+  @include mq('md') {
+    padding: prem(37) 0;
+    height: initial;
+    font-size: prem(28);
+    line-height: calc(37 / 28);
+    }
+}
+
+.tab__menu-item:hover {
+  opacity: 0.8;
+}
+
+.tab__menu-item1 {
+  background-color: $green1;
+}
+
+.tab__menu-item2 {
+  background-color: $green3;
+}
+
+.tab__menu-item.tab-active {
+  height: prem(115);
+}

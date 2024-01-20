@@ -1,0 +1,218 @@
+@use "foundation" as *;
+
+.footer {
+  position: relative;
+}
+
+.footer__inner {
+  padding: 0 3% 0 prem(35);
+}
+
+.footer__bg {
+  padding-top: prem(50);
+  padding-bottom: prem(107);
+  background-color: $grey1;
+  @include mq("md") {
+    padding-bottom: prem(100);
+  }
+}
+
+.footer__sns-list {
+  display: flex;
+  gap: prem(30);
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.footer__sns-item {
+  @include mq('md') {
+    margin-left: prem(10);
+  }
+}
+
+.footer__sns-item a {
+  width: prem(30);
+  @include mq("md") {
+    width: prem(50);
+  }
+}
+
+.footer__sns-item a:hover {
+  opacity: 0.6;
+}
+
+.footer__sns-item a img {
+  width: 100%;
+}
+
+.footer__address-list {
+  margin-top: prem(114);
+  @include mq("md") {
+    margin-top: prem(150);
+  }
+}
+
+.footer__logo {
+  width: prem(220);
+  @include mq("md") {
+    width: prem(300);
+  }
+}
+
+.footer__address-texts {
+  margin-top: prem(10);
+  font-size: prem(14);
+  line-height: calc(19 / 14);
+  font-weight: $regular;
+  @include mq("md") {
+    margin-top: prem(25);
+    font-size: prem(24);
+    line-height: calc(34 / 24);
+  }
+}
+
+.footer__address-texts-flex {
+  display: flex;
+}
+
+.footer__address-texts-flex + .footer__address-texts-flex {
+  margin-top: prem(5);
+  @include mq("md") {
+    margin-top: prem(15);
+  }
+}
+
+.footer__nav {
+  position: absolute;
+  top: prem(-50);
+  right: 0;
+  @include mq("md") {
+    top: prem(-550);
+  }
+}
+
+.footer__nav-bg {
+  padding: prem(55) prem(83);
+  padding-bottom: prem(20);
+  background-color: $grey3;
+  @include mq("md") {
+    padding: prem(60);
+  }
+}
+
+.footer__nav-wrap {
+  display: flex;
+  gap: prem(60);
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.footer__nav-list--left,
+.footer__nav-list--right {
+  margin: auto;
+}
+
+.footer__nav-item--big {
+  font-size: prem(14);
+  line-height: 2;
+  font-weight: $regular;
+  color: $white;
+  @include mq("md") {
+    font-size: prem(24);
+    line-height: calc(50 / 24);
+  }
+}
+
+.footer__nav-item--small {
+  font-size: prem(12);
+  line-height: calc(28 / 12);
+  font-weight: $regular;
+  color: $white;
+  @include mq("md") {
+    font-size: prem(20);
+    line-height: calc(50 / 20);
+  }
+}
+
+.footer__nav-item--big a,
+.footer__nav-item--small a {
+  padding: prem(2) 0;
+}
+
+.footer__nav-btn {
+  margin-top: prem(80);
+  text-align: center;
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $bold;
+  color: $white;
+  background-color: $grey3;
+  overflow: hidden;
+  outline: none;
+  transition: cubic-bezier(0.58, 0.01, 0.26, 0.93);
+  @include mq("md") {
+    margin-top: prem(62);
+    width: prem(480);
+    font-size: prem(28);
+    line-height: calc(37 / 28);
+  }
+}
+
+.footer__nav-btn span {
+  position: relative;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.footer__nav-btn a {
+  padding: prem(15) 0;
+  display: inline-block;
+  border: 1px solid $white;
+  position: relative;
+  width: 100%;
+  @include mq("md") {
+    padding: prem(19) 0;
+  }
+}
+
+.footer__nav-btn a:hover {
+  opacity: 1;
+}
+
+.footer__nav-btn a:hover span {
+  color: $black;
+}
+
+.footer__nav-btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: $white;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+.footer__nav-btn a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+.footer__copyright {
+  margin-top: prem(20);
+  font-size: prem(12);
+  line-height: calc(17 / 12);
+  font-weight: $regular;
+  color: $white;
+  text-align: end;
+  @include mq("md") {
+    font-size: prem(20);
+    line-height: calc(27 / 20);
+  }
+}

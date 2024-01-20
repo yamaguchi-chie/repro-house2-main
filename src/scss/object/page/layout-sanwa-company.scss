@@ -1,0 +1,8 @@
+@use "foundation" as *;
+
+.layout-sanwa-company {
+  margin-top: prem(150);
+  @include mq('md') {
+  margin-top: prem(141);
+  }
+}

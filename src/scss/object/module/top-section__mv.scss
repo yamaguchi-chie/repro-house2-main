@@ -1,0 +1,75 @@
+@use "foundation" as *;
+
+.top-section__mv {
+  width: 100%;
+}
+
+.top-section__text-wrap {
+  width: 100%;
+  line-height: 1;
+  text-align: center;
+  color: $white;
+  position: absolute;
+  top: prem(90);
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 2px 1px rgba($color: $black, $alpha: 0.75));
+  @include mq("md") {
+    top: prem(60);
+  }
+}
+
+.top-section__main-title {
+  font-family: $Roboto;
+  font-size: prem(64);
+  font-weight: $medium;
+  text-transform: capitalize;
+  @include mq("md") {
+    font-size: prem(72);
+  }
+}
+
+.top-section__sub-title {
+  margin-top: prem(10);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: prem(24);
+  }
+}
+
+.top-section__text {
+  margin-top: prem(24);
+  font-size: prem(21);
+  font-weight: $bold;
+  @include mq("md") {
+    margin-top: prem(30);
+    font-size: prem(32);
+    line-height: calc(42 / 32);
+  }
+}
+
+.top-section__more-link {
+  font-size: prem(16);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: prem(24);
+  }
+}
+
+.top-section__more-link a {
+  padding: prem(16) prem(20);
+  display: inline-block;
+}
+
+.top-section__img img {
+  width: 100%;
+  aspect-ratio: 1366/768;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 750/768;
+    object-position: top center;
+  }
+}

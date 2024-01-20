@@ -1,0 +1,39 @@
+@use "foundation" as *;
+
+.page-top {
+  font-size: prem(15);
+  line-height: 1;
+  color: $white;
+  text-transform: uppercase;
+  background-color: $grey1;
+  cursor: pointer;
+  width: prem(50);
+  height: prem(50);
+  position: relative;
+  transition: background-color 0.6s;
+  @include mq("md") {
+    width: prem(88);
+    height: prem(88);
+  }
+}
+
+.page-top::before {
+  content: "";
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  width: prem(10);
+  height: prem(10);
+  border-top: 1px solid $black;
+  border-right: 1px solid $black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  @include mq("md") {
+    width: prem(19);
+    height: prem(19);
+  }
+}
+
+.page-top:hover {
+  background-color: $white;
+  opacity: 1;
+}

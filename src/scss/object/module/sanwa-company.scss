@@ -1,0 +1,85 @@
+@use "foundation" as *;
+
+  .sanwa-company__sub-title-wrap {
+  margin-top: prem(100);
+}
+
+.sanwa-company__sub-title-img {
+  margin: 0 auto;
+  width: prem(275);
+  @include mq('md') {
+  width: prem(320);
+  }
+}
+
+.sanwa-company__sub-title-img img {
+  width: 100%;
+  aspect-ratio: 275/23;
+  object-fit: contain;
+  @include mq('md') {
+  aspect-ratio: 320/26;
+  }
+}
+
+.sanwa-company__sub-title-text {
+  margin-top: prem(30);
+  font-size: prem(36);
+  line-height: calc(50 / 36);
+  font-weight: $bold;
+  text-align: center;
+}
+
+.sanwa-company__imageText {
+  margin-top: prem(88);
+  @include mq('md') {
+  margin-top: prem(54);
+  }
+}
+
+.sanwa-company__imageText-img img {
+  max-height: initial;
+  aspect-ratio: 1000/580;
+}
+
+.sanwa-company__textarea-text--mt27.textarea-text--mt27 {
+  @include mq('md') {
+  line-height: calc(54.7/28);
+  }
+}
+
+.sanwa-company__btn-wrap {
+  margin-top: prem(34);
+  display: flex;
+  justify-content: end;
+  @include mq('md') {
+  margin-top: prem(60);
+  }
+}
+
+.sanwa-company__btn {
+  width: prem(400);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  font-weight: $bold;
+  @include mq('md') {
+  width: 100%;
+  font-size: prem(28);
+  line-height: calc(37 / 28);
+  }
+}
+
+.sanwa-company__btn a {
+  padding: prem(28) prem(30);
+  display: flex;
+  justify-content: space-between;
+}
+
+.more-btn-bg img {
+  width: prem(23);
+  aspect-ratio: 23/18;
+  object-fit: contain;
+  @include mq('md') {
+  width: prem(30);
+  aspect-ratio: 30/24;
+  }
+}

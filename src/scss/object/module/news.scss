@@ -1,0 +1,98 @@
+@use "foundation" as *;
+
+.news {
+  width: 100%;
+  height: prem(80);
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  @include mq("md") {
+    height: prem(120);
+  }
+}
+
+.news__wrap {
+  margin-right: calc((50% - 50vw));
+  padding: prem(10) 0;
+  display: flex;
+  background-color: $grey5;
+  align-items: center;
+  @include mq("md") {
+    margin: 0 calc((50% - 50vw));
+    padding: prem(20) 0;
+  }
+}
+
+.news__title {
+  padding: 0 prem(50);
+  font-family: $Montserrat;
+  font-size: prem(18);
+  line-height: calc(60 / 18);
+  font-weight: $regular;
+  color: $white;
+  text-transform: uppercase;
+  border-right: 1px solid $white;
+  @include mq("md") {
+    padding: 0 prem(45);
+    font-size: prem(24);
+    line-height: calc(80 / 24);
+  }
+}
+
+.news__content {
+  padding-left: prem(50);
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  @include mq("md") {
+    padding-left: prem(30);
+  }
+}
+
+.news__swiper {
+  height: prem(60);
+  @include mq("md") {
+    height: prem(80);
+  }
+}
+
+.news__swiper .swiper,
+.news__swiper .swiper-wrapper,
+.news__swiper .swiper-slide {
+  height: inherit;
+}
+
+.news__swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  font-family: $Montserrat;
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $regular;
+  color: $white;
+  @include mq("md") {
+    font-size: prem(24);
+    line-height: calc(30 / 24);
+  }
+}
+
+.news__swiper-items {
+  padding: prem(18) prem(40);
+  max-width: prem(165);
+  position: relative;
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.news-pagination.swiper-pagination {
+  width: fit-content;
+  font-family: $Montserrat;
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $regular;
+  color: $white;
+  text-align: center;
+  position: initial;
+}

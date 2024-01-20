@@ -1,0 +1,33 @@
+@use "foundation" as *;
+
+.section-title {
+}
+
+.section-title__wrap {
+  font-weight: $regular;
+}
+
+.section-title__en {
+  font-family: $Montserrat;
+  font-size: prem(24);
+  line-height: calc(29 / 24);
+  text-transform: uppercase;
+  @include mq("md") {
+    font-size: prem(36);
+    line-height: calc(44 / 36);
+  }
+}
+
+.section-title__ja {
+  margin-top: prem(7);
+  margin-left: prem(-3);
+  font-size: prem(14);
+  line-height: calc(19 / 14);
+  font-weight: $regular;
+  @include mq("md") {
+    margin-top: prem(4);
+    margin-left: prem(-3);
+    font-size: prem(20);
+    line-height: calc(27 / 20);
+  }
+}

@@ -1,0 +1,109 @@
+@use "foundation" as *;
+
+.form-btn__list {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: prem(79);
+  overflow: hidden;
+  @include mq("md") {
+    bottom: prem(120);
+  }
+}
+
+.form-btn1,
+.form-btn2,
+.form-btn3 {
+  text-align: center;
+  position: relative;
+  color: $white;
+  outline: none;
+  transition: cubic-bezier(0.58, 0.01, 0.26, 0.93);
+}
+
+.form-btn1 a,
+.form-btn2 a,
+.form-btn3 a {
+  width: prem(180);
+  height: prem(100);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  transform-origin: bottom right;
+  transform: skewX(-11.5deg) scale(1.005);
+
+  @include mq("md") {
+    height: prem(150);
+  }
+}
+
+.form-btn1 a span,
+.form-btn2 a span,
+.form-btn3 a span {
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $bold;
+  color: $white;
+  transform: skewX(11.5deg);
+  position: relative;
+  z-index: 3;
+  @include mq("md") {
+    font-size: prem(24);
+    line-height: calc(31 / 24);
+  }
+}
+
+.form-btn1 a {
+  width: prem(200);
+  background-color: $green2;
+  @include mq("md") {
+    width: prem(259);
+  }
+}
+
+.form-btn2 a {
+  width: prem(200);
+  background-color: $green1;
+  @include mq("md") {
+    width: prem(263);
+  }
+}
+
+.form-btn3 a {
+  width: prem(200);
+  background-color: $green3;
+  @include mq("md") {
+    width: prem(259);
+  }
+}
+
+.form-btn1 a:hover,
+.form-btn2 a:hover,
+.form-btn3 a:hover {
+  opacity: 1;
+}
+
+.form-btn1 a::before,
+.form-btn2 a::before,
+.form-btn3 a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: $grey5;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+.form-btn1 a:hover::before,
+.form-btn2 a:hover::before,
+.form-btn3 a:hover::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}

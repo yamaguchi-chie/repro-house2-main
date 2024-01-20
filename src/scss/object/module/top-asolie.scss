@@ -1,0 +1,66 @@
+@use "foundation" as *;
+
+.top-asolie {
+  position: relative;
+  z-index: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+.top-asolie__inner {
+  background-color: $white;
+  position: relative;
+  padding-top: prem(80);
+  @include mq('md') {
+  padding-top: prem(100);
+  }
+}
+
+.top-asolie__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  @include mq('md') {
+  display: block;
+  }
+}
+
+.top-about__bottom {
+  margin-top: prem(70);
+  margin-left: auto;
+  max-width: prem(1100);
+  @include mq('md') {
+  margin-top: prem(100);
+  }
+}
+
+.top-about__bottom-title {
+  font-size: prem(24);
+  line-height: calc(32 / 24);
+  font-weight: $bold;
+  @include mq('md') {
+    font-size: prem(36);
+  line-height: calc(48 / 36);
+  }
+}
+
+.top-about__bottom p {
+  margin-top: prem(22);
+  max-width: prem(915);
+  font-size: prem(16);
+  line-height: calc(28 / 16);
+  font-weight: $regular;
+  text-align: justify;
+  @include mq('md') {
+    margin-top: prem(38);
+    font-size: prem(28);
+    line-height: calc(52 / 28);
+  }
+}
+
+.top-about__bottom-btn {
+  margin-top: prem(95);
+  margin-left: auto;
+  @include mq('md') {
+  margin-top: prem(147);
+  }
+}

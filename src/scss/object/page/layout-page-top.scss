@@ -1,0 +1,7 @@
+@use "foundation" as *;
+
+.layout-page-top {
+  position: fixed;
+  right: 0;
+  z-index: 200;
+}

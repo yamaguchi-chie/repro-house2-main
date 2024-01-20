@@ -1,0 +1,8 @@
+@use "foundation" as *;
+
+.layout-privacy-policy {
+  margin-top: prem(100);
+  @include mq('md') {
+    margin-top: prem(186);
+  }
+}

@@ -1,0 +1,128 @@
+@use "foundation" as *;
+
+.ImageText-item3 {
+  padding-bottom: prem(70);
+  @media screen {
+    padding-bottom: 0;
+  }
+}
+
+.ImageText-item3__wrap,
+.ImageText-item3__wrap--reverse {
+  width: 100%;
+  display: flex;
+}
+
+.ImageText-item3__wrap--reverse {
+  flex-direction: row-reverse;
+  @include mq("md") {
+    flex-direction: initial;
+  }
+}
+
+.ImageText-item3__img--top {
+  margin-left: calc((50vw - 50%) * -1);
+  @include mq(md) {
+    margin: 0 calc((50vw - 50%) * -1);
+  }
+}
+
+.ImageText-item3__img {
+  margin-right: prem(283);
+  margin-left: calc((50vw - 50%) * -1);
+  @include mq(md) {
+    margin-right: 0;
+    margin: 0 calc((50vw - 50%) * -1);
+  }
+}
+
+.ImageText-item3__img--right {
+  margin-left: prem(283);
+  margin-right: calc((50vw - 50%) * -1);
+  @include mq(md) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.ImageText-item3__img img,
+.ImageText-item3__img--right img {
+  width: 100%;
+  max-height: prem(500);
+  aspect-ratio: 1000/500;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 750/450;
+  }
+}
+
+.ImageText-item3__content-bg,
+.ImageText-item3__content-bg--left {
+  margin-top: prem(-100);
+  padding: prem(70) 0;
+  width: prem(713);
+  background-color: $white;
+  position: relative;
+  z-index: 5;
+  @include mq("md") {
+    width: initial;
+    margin-top: prem(-50);
+  }
+}
+
+.ImageText-item3__content-bg {
+  margin-left: auto;
+  padding-left: prem(70);
+  @include mq("md") {
+    margin-right: calc((50vw - 50%) * -1);
+    padding: 3.75rem 8% 30px 10%;
+  }
+}
+
+.ImageText-item3__content-bg--left {
+  padding-right: prem(70);
+  @include mq("md") {
+    margin-right: initial;
+    margin-left: calc((50vw - 50%) * -1);
+    padding: 3.75rem 10% 30px 8%;
+  }
+}
+
+.ImageText-item3__content {
+  width: prem(647);
+  @include mq(md) {
+    width: initial;
+  }
+}
+
+.ImageText-item3__content.textarea {
+  width: prem(647);
+  @include mq(md) {
+    padding: 0;
+    width: initial;
+  }
+}
+
+.ImageText-item3__title {
+  font-size: prem(24);
+  line-height: calc(34 / 24);
+  font-weight: $bold;
+  text-align: justify;
+  @include mq(md) {
+    font-size: prem(36);
+    line-height: calc(52 / 36);
+  }
+}
+
+.ImageText-item3__text {
+  margin-top: prem(27);
+  font-size: prem(16);
+  line-height: calc(31 / 16);
+  font-weight: $regular;
+  text-align: justify;
+  @include mq(md) {
+    margin-top: prem(34);
+    font-size: prem(28);
+    line-height: calc(53.6 / 28);
+  }
+}

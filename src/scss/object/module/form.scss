@@ -1,0 +1,365 @@
+@use "foundation" as *;
+
+.form {
+}
+
+.form__form--contact {
+  display: none;
+  opacity: 0;
+}
+
+.form__form--contact.tab-active {
+  display: block;
+  opacity: 1;
+}
+
+.form__modelHouse {
+}
+
+.form__modelHouse-flex {
+  padding: prem(100);
+  display: flex;
+  gap: prem(100);
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+  @include mq("md") {
+    padding: prem(60);
+    gap: prem(65);
+    flex-direction: column;
+  }
+}
+
+.form__modelHouse-flex--confirm {
+  padding: 0;
+}
+
+.form__modelHouse-left,
+.form__modelHouse-right {
+  width: prem(450);
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.form__modelHouse-img {
+  display: inline-block;
+}
+
+.form__modelHouse-img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 450/250;
+  object-fit: cover;
+  @include mq("md") {
+    aspect-ratio: 510/300;
+  }
+}
+
+.form__modelHouse-left input,
+.form__modelHouse-right input {
+  margin: 0;
+  width: prem(20);
+  height: prem(20);
+}
+
+.form__modelHouse-left label,
+.form__modelHouse-right label {
+  font-family: $Montserrat;
+  font-size: prem(24);
+  line-height: calc(32 / 24);
+  font-weight: $bold;
+  display: flex;
+  gap: prem(8);
+  align-items: center;
+  @include mq("md") {
+    font-size: prem(28);
+    line-height: calc(38 / 28);
+  }
+}
+
+.form__modelHouse-radio {
+  margin-top: prem(21);
+}
+
+.form__wrap {
+  display: flex;
+  @include mq("md") {
+    margin: 0 calc((50vw - 50%) * -1);
+    padding-top: prem(36);
+    padding-bottom: prem(30);
+    display: block;
+  }
+}
+
+.form__wrap--dummy {
+  display: none;
+}
+
+.form__wrap--select {
+  height: prem(80);
+  @include mq("md") {
+    height: initial;
+  }
+}
+
+.form__select-wrap {
+  width: prem(300);
+  display: inline-block;
+  position: relative;
+  @include mq("md") {
+    width: 100%;
+  }
+}
+
+.form__select-wrap::after {
+  content: "＞";
+  width: prem(18);
+  height: prem(18);
+  font-size: prem(18);
+  position: absolute;
+  top: 55%;
+  right: prem(17);
+  transform: translateY(-50%) rotate(90deg);
+  pointer-events: none;
+  @include mq("md") {
+    width: prem(24);
+    height: prem(24);
+    font-size: prem(24);
+    right: prem(25);
+  }
+}
+
+.form__wrap:nth-child(2n) {
+  background-color: $grey2;
+}
+
+.form__wrap dt {
+  padding-left: prem(30);
+  margin: auto;
+  width: 27%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq("md") {
+    margin: 0;
+    width: 100%;
+    gap: prem(23);
+    justify-content: initial;
+  }
+}
+
+.form__wrap--textarea dt {
+  align-items: start;
+}
+
+.form__wrap dd {
+  padding: prem(15);
+  width: 73%;
+  @include mq("md") {
+    margin-top: prem(21);
+    padding: 0 prem(25);
+    width: 100%;
+  }
+}
+
+.form__label {
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+  }
+}
+
+.form__label .required {
+  padding: prem(3) prem(11);
+  font-size: prem(14);
+  line-height: calc(19 / 14);
+  font-weight: $bold;
+  color: $red;
+  border: 1px solid $red;
+  border-radius: 7px;
+  @include mq("md") {
+    padding: prem(4) prem(16);
+    font-size: prem(19);
+    line-height: calc(26 / 19);
+  }
+}
+
+.form__label .any {
+  padding: prem(3) prem(11);
+  font-size: prem(14);
+  line-height: calc(19 / 14);
+  font-weight: $bold;
+  color: $white;
+  background-color: $grey6;
+  border: none;
+  border-radius: 7px;
+  @include mq("md") {
+    padding: prem(4) prem(16);
+    font-size: prem(19);
+    line-height: calc(26 / 19);
+  }
+}
+
+.form__input--select {
+  display: flex;
+  align-items: center;
+  gap: prem(18);
+  flex-wrap: wrap;
+}
+
+.form-input input[type="text"],
+.form-input input[type="tel"],
+.form-input input[type="email"],
+.form-input select {
+  padding-inline: prem(10);
+  width: 100%;
+  height: prem(50);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  display: block;
+  border-radius: 0;
+  border: 0.5px $grey4 solid;
+  appearance: none;
+  background-color: $white;
+  background-image: none;
+  @include mq("md") {
+    height: prem(80);
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+  }
+}
+
+.form-input input[type="radio"] {
+  @include mq("md") {
+    width: prem(20);
+    height: prem(20);
+  }
+}
+
+.form-input span {
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+  }
+}
+
+.form-input select {
+  appearance: none;
+  color: $black;
+}
+
+.form-input--zip {
+  display: flex;
+}
+
+.form-input--zip input[type="text"] {
+  width: prem(200);
+  @include mq("md") {
+    width: prem(300);
+  }
+}
+
+.form-input--zip button {
+  margin-left: prem(30);
+  padding-inline: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.form-input--zip span {
+  font-size: prem(18);
+  line-height: calc(20 / 18);
+  color: $blue;
+  border-bottom: 1px $blue solid;
+}
+
+.form__wrap textarea {
+  padding: prem(10);
+  width: 100%;
+  height: prem(270);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    height: prem(500);
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+  }
+}
+
+.form__checkbox {
+  margin-top: prem(50);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__checkbox input {
+}
+
+.form__checkbox label {
+  padding-left: prem(3);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    font-size: prem(28);
+    line-height: calc(38 / 28);
+  }
+}
+
+.form-checkbox input {
+  width: prem(16);
+  height: prem(16);
+}
+
+.form__btn-flex {
+  margin-top: prem(50);
+  display: flex;
+  justify-content: center;
+  gap: prem(30);
+  @include mq("md") {
+    margin-top: prem(85);
+    gap: prem(50);
+    flex-direction: column-reverse;
+  }
+}
+
+.form__reset,
+.form__confirm {
+  width: prem(350);
+  height: prem(80);
+  @include mq("md") {
+    width: 100%;
+    height: prem(100);
+  }
+}
+
+.form__reset-btn,
+.form__confirm-btn {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  font-weight: $bold;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  @include mq("md") {
+    font-size: prem(32);
+    line-height: calc(43 / 32);
+  }
+}
+
+.form__reset-btn {
+  background-color: $grey3;
+}
+
+.form__confirm-btn {
+  background-color: $grey5;
+}

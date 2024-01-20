@@ -1,0 +1,19 @@
+@use "foundation" as *;
+
+.layout-form {
+  margin-top: prem(-100);
+  @include mq('md') {
+  margin-top: prem(-50);
+  }
+}
+
+.layout-form--contact {
+  margin-top: prem(100);
+  @include mq('md') {
+  margin-top: 0;
+  }
+}
+
+.layout-form--confirm {
+  margin-top: prem(100);
+}

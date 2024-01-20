@@ -1,0 +1,51 @@
+@use "foundation" as *;
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: prem(17);
+  height: prem(17);
+}
+
+//矢印
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  position: absolute;
+  font-family: $Montserrat;
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $regular;
+  color: $white;
+}
+
+.swiper-button-next:after {
+  content: "＞";
+  
+}
+
+.swiper-button-prev:after {
+  content: "＜";
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+// .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+//   bottom: auto;
+//   text-align: right;
+//   left: auto;
+//   right: 4%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }

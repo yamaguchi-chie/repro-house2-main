@@ -1,0 +1,124 @@
+@use "foundation" as *;
+
+.exterior {
+}
+
+.exterior__inner {
+}
+
+.exterior__header {
+  height: prem(100);
+  display: flex;
+  justify-content: space-between;
+  @include mq("md") {
+    height: inherit;
+    display: block;
+  }
+}
+
+.exterior__description {
+  display: flex;
+  align-items: end;
+  font-size: prem(16);
+  line-height: calc(28 / 16);
+  font-weight: $regular;
+  @include mq("md") {
+    margin-top: prem(97);
+    display: block;
+    font-size: prem(28);
+    line-height: calc(50 / 28);
+  }
+}
+
+.exterior__picture {
+  margin-top: prem(96);
+  @include mq("md") {
+    margin-top: prem(46);
+  }
+}
+
+.exterior__picture-top-img {
+  margin-right: calc((50vw - 50%) * -1);
+}
+
+.exterior__picture-top-img img {
+  width: 100%;
+  aspect-ratio: 1283/600;
+  object-fit: cover;
+}
+
+.exterior__picture-bottom {
+  margin-top: prem(30);
+  @include mq('md') {
+    margin-top: prem(20);
+  }
+}
+
+.exterior__picture-bottom-flex {
+  display: flex;
+  gap: prem(30);
+  @include mq('md') {
+    gap: prem(20);
+  }
+}
+
+.exterior__picture-bottom-left,
+.exterior__picture-bottom-right {
+  width: 50%;
+}
+
+.exterior__picture-bottom-left {
+  display: flex;
+  flex-direction: column;
+  gap: prem(30);
+  @include mq('md') {
+  gap: prem(20);
+  }
+}
+
+.exterior__picture-bottom-left01-img {
+}
+
+.exterior__picture-bottom-left01-img img {
+  width: 100%;
+  aspect-ratio: 585/585;
+  object-fit: cover;
+}
+
+.exterior__picture-bottom-left02-img {
+  margin-left: calc(((50vw - 100%) - prem(30) / 2) * -1);
+  height: 100%;
+  max-height: prem(700);
+  @include mq('md') {
+    margin-left: calc(((50vw - 100%) - prem(20) / 2) * -1);
+    max-height: prem(400);
+  }
+}
+
+.exterior__picture-bottom-left02-img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 668/585;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 365 / 340;
+  }
+}
+
+.exterior__picture-bottom-right-img {
+  margin-right: calc(((50vw - 100%) - prem(30) / 2) * -1);
+  height: 100%;
+  max-height: prem(1315);
+  @include mq('md') {
+    margin-right: calc(((50vw - 100%) - prem(20) / 2) * -1);
+  }
+}
+
+.exterior__picture-bottom-right-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 365/700;
+  }
+}

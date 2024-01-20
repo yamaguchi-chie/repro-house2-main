@@ -1,0 +1,79 @@
+@use "foundation" as *;
+
+.page-3rd-mv__title {
+  text-align: center;
+}
+
+.page-3rd-mv-title__en {
+  font-family: $Montserrat;
+  font-size: prem(36);
+  line-height: calc(44 / 36);
+  font-weight: $regular;
+  text-transform: uppercase;
+  @include mq('md') {
+    font-size: prem(48);
+    line-height: calc(58 / 48);
+    }
+}
+
+.page-3rd-mv-title__ja {
+  margin-top: prem(7);
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  font-weight: $regular;
+  @include mq('md') {
+    font-size: prem(20);
+    line-height: calc(27 / 20);
+    }
+}
+
+.page-3rd-mv__img {
+  margin: 0 calc((50vw - 50%) * -1);
+  margin-top: prem(98);
+}
+
+.page-3rd-mv__img img {
+  width: 100%;
+  aspect-ratio: 1366/500;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 750/450;
+  }
+}
+
+.page-3rd-mv__img--wood img {
+  object-position: bottom 24% left 50%;
+  @include mq('md') {
+    object-position: bottom 50% left 50%;
+  }
+}
+
+.page-3rd-mv__img--one-story img {
+  object-position: bottom 54% left 50%;
+  @include mq('md') {
+    object-position: bottom 30% left 50%;
+  }
+}
+
+.page-3rd-mv__img--high-house img {
+  object-position: bottom 44% left 50%;
+  @include mq('md') {
+    object-position: bottom 15% left 50%;
+  }
+}
+
+.page-3rd-mv__img--three-story-house img {
+  object-position: bottom 66% left 50%;
+  @include mq('md') {
+    object-position: bottom 71% left 50%;
+  }
+}
+
+.page-3rd-mv__textarea {
+  padding: prem(70);
+  margin-top: prem(-100);
+  @include mq('md') {
+    padding: prem(60);
+    margin-top: prem(-50);
+    }
+}

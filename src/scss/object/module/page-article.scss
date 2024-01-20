@@ -1,0 +1,9 @@
+@use "foundation" as *;
+
+.page-article {
+  overflow: hidden;
+}
+
+.page-article__imageText-img--page-exterior-article02 img {
+  object-position: bottom;
+}

@@ -1,0 +1,51 @@
+@use 'foundation' as *;
+
+.about-chart-circle {
+  width: fit-content;
+}
+
+.about-chart-circle__bg {
+  width: prem(180);
+  aspect-ratio: 1/1;
+  background-color: $grey1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  @include mq('md') {
+  width: prem(200);
+  }
+}
+
+.about-chart-circle__bg:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: prem(-33);
+  transform: translateY(-50%);
+  width: prem(10);
+  height: prem(20);
+  background-image: url(../images/common/arrow.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @include mq('md') {
+    width: prem(15);
+  height: prem(30);
+
+  }
+}
+
+.about-chart-circle__bg p {
+  font-size: prem(24);
+  line-height: calc(32 / 24);
+  font-weight: $medium;
+  @include mq('md') {
+    font-size: prem(28);
+  line-height: calc(37 / 28);
+
+  }
+}
+

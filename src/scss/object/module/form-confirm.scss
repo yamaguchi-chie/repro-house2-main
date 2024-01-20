@@ -1,0 +1,129 @@
+@use "foundation" as *;
+
+.form-confirm {
+}
+
+.form-confirm__title {
+  filter: drop-shadow(0 0 3px rgba($color: $white, $alpha: 1));
+}
+
+.form-confirm__announce {
+  margin-top: prem(30);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  text-align: center;
+  @include mq("md") {
+    margin-top: prem(50);
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+  }
+}
+
+.form-confirm__form {
+  margin-top: prem(30);
+  @include mq("md") {
+    margin-top: prem(50);
+  }
+}
+
+table.formTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.formTable tr {
+  @include mq("md") {
+    margin: 0 calc((50vw - 50%) * -1);
+    padding-top: prem(36);
+    padding-bottom: prem(30);
+    display: block;
+  }
+}
+
+table.formTable th,
+table.formTable td {
+  padding-top: prem(20);
+  padding-bottom: prem(20);
+  margin: auto;
+  height: prem(80);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: initial;
+    font-size: max(16px, prem(28));
+    line-height: calc(37 / 28);
+    display: block;
+  }
+}
+
+table.formTable tr:nth-child(2n-1) {
+  background-color: $grey2;
+}
+
+table.formTable th {
+  padding-left: prem(30);
+  font-weight: $regular;
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    margin: 0;
+    width: 100%;
+    gap: prem(23);
+    justify-content: initial;
+  }
+}
+
+table.formTable td {
+  padding: prem(15);
+  width: 73%;
+  @include mq("md") {
+    margin-top: prem(21);
+    padding-right: prem(30);
+    padding-left: prem(50);
+    width: 100%;
+  }
+}
+
+.form-confirm__btn-wrap {
+  margin-top: prem(50);
+  display: flex;
+  justify-content: center;
+  gap: prem(30);
+  @include mq("md") {
+    margin-top: prem(85);
+    gap: prem(50);
+    flex-direction: column-reverse;
+  }
+}
+
+.form-confirm__btn-wrap input[type="button"],
+.form-confirm__btn-wrap input[type="submit"] {
+  width: prem(350);
+  height: prem(80);
+  font-size: prem(18);
+  line-height: calc(24 / 18);
+  font-weight: $bold;
+  color: $white;
+  border: none;
+  @include mq("md") {
+    width: 100%;
+    height: prem(100);
+    font-size: prem(32);
+    line-height: calc(43 / 32);
+  }
+}
+
+.form-confirm__btn-wrap input[type="button"] {
+  background-color: $grey3;
+}
+
+.form-confirm__btn-wrap input[type="submit"] {
+  background-color: $grey5;
+}
+
+p.error_messe {
+  margin: 5px 0;
+  color: red;
+}

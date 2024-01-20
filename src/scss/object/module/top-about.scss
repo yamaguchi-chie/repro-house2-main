@@ -1,0 +1,37 @@
+@use "foundation" as *;
+
+.top-about-mv {
+  margin-top: prem(98);
+}
+
+.top-about__imageText-img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1000/500;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.top-about__scroll {
+  margin-top: prem(27);
+  @include mq("md") {
+    margin-top: prem(130);
+    margin-right: calc((50vw - 50%) * -1);
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+.top-about__chart-circle {
+  margin-left: auto;
+  display: flex;
+  gap: prem(50);
+  @include mq("md") {
+    padding: prem(5) 0;
+    padding-right: prem(60);
+  }
+}
+
+.top-about__btn {
+  margin-left: auto;
+}

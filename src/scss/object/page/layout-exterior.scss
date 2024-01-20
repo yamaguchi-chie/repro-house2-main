@@ -1,0 +1,8 @@
+@use "foundation" as *;
+
+.layout-exterior {
+  margin-top: prem(109);
+  @include mq("md") {
+    margin-top: prem(141);
+  }
+}

@@ -1,0 +1,44 @@
+@use "foundation" as *;
+
+.flow-item {
+  position: relative;
+  }
+
+  .flow-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: prem(-70);
+    transform: translateX(-50%);
+    width: prem(8);
+    height: prem(50);
+    background-image: url(../images/common/about-flow_arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.flow-item__title {
+  padding: prem(36) 0;
+  width: 100%;
+  border: $grey4 1px solid;
+  font-size: prem(21);
+  line-height: calc(28 / 21);
+  font-weight: $bold;
+  text-align: center;
+  @include mq('md') {
+    font-size: prem(32);
+    line-height: calc(43 / 32);
+  }
+}
+
+.flow-item__text {
+  margin-top: prem(20);
+  font-size: prem(16);
+  line-height: calc(28 / 16);
+  font-weight: $regular;
+  @include mq('md') {
+    font-size: prem(28);
+    line-height: calc(50 / 28);
+  }
+}

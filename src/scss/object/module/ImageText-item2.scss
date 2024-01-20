@@ -1,0 +1,118 @@
+@use "foundation" as *;
+
+.ImageText-item2 {
+  margin-top: prem(150);
+  @include mq("md") {
+    margin-top: prem(200);
+  }
+}
+
+.ImageText-item2__wrap,
+.ImageText-item2__wrap--reverse {
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+.ImageText-item2__wrap--reverse {
+  flex-direction: row-reverse;
+  @include mq("md") {
+    flex-direction: initial;
+  }
+}
+
+.ImageText-item2__img,
+.ImageText-item2__img--right {
+  flex-grow: 1;
+}
+
+.ImageText-item2__img {
+  margin-left: calc((50vw - 50%) * -1);
+  width: 100%;
+  @include mq(md) {
+    margin: 0 calc((50vw - 50%) * -1);
+    width: initial;
+  }
+}
+
+.ImageText-item2__img--right {
+  margin-right: calc((50vw - 50%) * -1);
+  @include mq(md) {
+    margin: 0 calc((50vw - 50%) * -1);
+  }
+}
+
+.ImageText-item2__img img,
+.ImageText-item2__img--right img {
+width: 100%;
+  max-height: prem(500);
+  aspect-ratio: 724/500;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 750/450;
+  }
+}
+
+.ImageText-item2__content-bg,
+.ImageText-item2__content-bg--left {
+  padding-bottom: prem(70);
+  background-color: $white;
+  position: relative;
+  z-index: 5;
+  @include mq("md") {
+    padding-top: prem(60);
+    padding-bottom: 0;
+  }
+}
+
+.ImageText-item2__content-bg--page-article {
+  padding-bottom: 0;
+}
+
+.ImageText-item2__content-bg {
+  padding-left: prem(50);
+  @include mq("md") {
+    padding-left: 0;
+  }
+}
+
+.ImageText-item2__content-bg--left {
+  padding-right: prem(50);
+  @include mq("md") {
+    margin-right: initial;
+  }
+}
+
+.ImageText-item2__content {
+  width: prem(509);
+  @include mq(md) {
+    width: initial;
+  }
+}
+
+.ImageText-item2__title {
+  font-size: prem(24);
+  line-height: calc(34 / 24);
+  font-weight: $bold;
+  @include mq(md) {
+    font-size: prem(36);
+    line-height: calc(52 / 36);
+  }
+}
+
+.ImageText-item2__text {
+  margin-top: prem(27);
+  font-size: prem(16);
+  line-height: calc(31 / 16);
+  font-weight: $regular;
+  text-align: justify;
+  @include mq(md) {
+    margin-top: prem(34);
+    font-size: prem(28);
+    line-height: calc(53.6 / 28);
+  }
+}

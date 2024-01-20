@@ -1,0 +1,78 @@
+@use "foundation" as *;
+
+.page-mv {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.page-mv__inner,
+.page-mv__flex,
+.page-mv__img,
+.page-mv__img img {
+  height: inherit;
+}
+
+.page-mv__flex {
+  display: flex;
+  position: relative;
+}
+
+.page-mv__title {
+  position: absolute;
+  top: 50%;
+  left: prem(50);
+  transform: translateY(-50%);
+  filter: drop-shadow(0 0 3px rgba($color: $white, $alpha: 1));
+}
+
+.page-mv-title__en {
+  font-family: $Montserrat;
+  font-size: prem(36);
+  line-height: calc(44 / 36);
+  text-transform: capitalize;
+  @include mq("md") {
+    font-size: prem(48);
+    line-height: calc(58 / 48);
+  }
+}
+
+.page-mv-title__en--uppercase {
+  text-transform: uppercase;
+}
+
+.page-mv-title__ja {
+  margin-top: prem(2);
+  font-family: $NotoSans;
+  font-size: prem(16);
+  line-height: calc(21 / 16);
+  @include mq("md") {
+    font-size: prem(20);
+    line-height: calc(27 / 20);
+  }
+}
+
+.page-mv__img {
+  width: 100%;
+  margin-left: 50%;
+  margin-right: calc((50vw - 50%) * -1);
+  @include mq('md') {
+    margin-left: calc((330 / 750) * 100%);
+  }
+}
+
+.page-mv__img img {
+  width: 100%;
+  aspect-ratio: 683/768;
+  object-fit: cover;
+  @include mq('md') {
+    aspect-ratio: 420/1064;
+    object-position: bottom 50% left 45%;
+  }
+}
+
+.asolie-mv__img img {
+  object-position: bottom 50% left 48%;
+  @include mq('md') {
+    object-position: bottom 50% left 36%;
+  }
+}

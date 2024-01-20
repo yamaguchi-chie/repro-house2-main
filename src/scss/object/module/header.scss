@@ -1,0 +1,221 @@
+@use "foundation" as *;
+
+.header {
+  height: prem(100);
+  background-color: $white;
+  transition: 0.6s;
+}
+
+.header.page-header {
+  background-color: transparent;
+}
+
+.header.is-scroll {
+  background-color: rgba($color: $white, $alpha: 0.5);
+}  
+
+.header__inner {
+  padding-left: prem(50);
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  max-width: prem(220);
+  width: 100%;
+  height: inherit;
+}
+
+.header__logo a {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__hamburger {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  position: relative;
+  z-index: 999;
+  width: prem(100);
+  height: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.header__hamburger:hover span {
+  height: 2px;
+}
+
+.header__hamburger.is-open {
+  background-color: transparent;
+}
+
+.header__hamburger span {
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 1px;
+  background-color: $black;
+  transition: 0.6s;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: calc(50% + prem(-10));
+  width: prem(85);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 50%;
+  width: prem(100);
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: calc(50% + prem(10));
+  width: prem(70);
+}
+
+.header__hamburger.is-open span {
+  top: 50%;
+  right: prem(-35);
+  background-color: $grey4;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  transform: translateX(-50%) rotate(14deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  width: prem(85);
+  transform: translateX(-50%) rotate(-14deg);
+}
+
+.drawer {
+  padding-top: prem(120);
+  display: none;
+  position: absolute;
+  z-index: 980;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: prem(580);
+  height: 100dvh;
+  background-color: $white;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  @include mq("md") {
+    padding: prem(200) 0;
+    width: 100%;
+  }
+}
+
+.drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.drawer-item a {
+  display: block;
+}
+
+.drawer-item a:hover {
+  opacity: 1;
+}
+
+.drawer-item--big a {
+  padding: prem(15) 0;
+  padding-left: prem(40);
+  font-size: prem(18);
+  font-weight: $bold;
+  line-height: calc(24 / 18);
+  @include mq("md") {
+    padding: prem(20) 0;
+    padding-left: prem(60);
+    font-size: prem(28);
+    line-height: calc(38 / 28);
+  }
+}
+
+.drawer-items--bottom {
+  margin-top: prem(10);
+}
+
+.drawer-item--small a {
+  padding: prem(5) prem(40);
+  font-size: prem(14);
+  font-weight: $regular;
+  line-height: calc(19 / 14);
+  @include mq("md") {
+    padding: prem(10) prem(60);
+    font-size: prem(24);
+    line-height: calc(33 / 24);
+  }
+}
+
+.drawer__btn-list.form-btn__list {
+  bottom: prem(-1);
+  overflow: hidden;
+  @include mq("md") {
+    position: fixed;
+  }
+}
+
+.drawer__form-btn3 a {
+  width: prem(200);
+  @include mq("md") {
+    width: prem(259);
+  }
+}
+
+.drawer-item span {
+  position: relative;
+  transition: 0.3s;
+}
+
+.drawer-item span:before {
+  content: "";
+  position: absolute;
+  bottom: prem(-5);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $grey5;
+  transition: 0.2s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+
+.drawer-item a:hover span:before {
+  transform: scale(1, 1);
+}
+
+.overview-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 950;
+  width: 100%;
+  background: transparent;
+  transition: all 1s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overview-bg.is-open {
+  visibility: visible;
+  opacity: 1;
+  height: 100dvh;
+}

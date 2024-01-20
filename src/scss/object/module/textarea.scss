@@ -1,0 +1,54 @@
+@use "foundation" as *;
+
+.textarea {
+  background-color: $white;
+  position: relative;
+  z-index: 5;
+  @include mq("md") {
+    padding: prem(60);
+  }
+}
+
+.textarea-titie {
+  font-size: prem(24);
+  line-height: calc(33 / 24);
+  font-weight: $bold;
+  @include mq("md") {
+    font-size: prem(36);
+    line-height: calc(48 / 36);
+  }
+}
+
+.textarea-text--mt30,
+.textarea-text--mt27,
+.textarea-text--mt22 {
+  font-size: prem(16);
+  line-height: calc(31 / 16);
+  font-weight: $regular;
+  text-align: justify;
+  @include mq("md") {
+    font-size: prem(28);
+    line-height: calc(51 / 28);
+  }
+}
+
+.textarea-text--mt30 {
+  margin-top: prem(30);
+  @include mq("md") {
+    margin-top: prem(50);
+  }
+}
+
+.textarea-text--mt27 {
+  margin-top: prem(27);
+  @include mq("md") {
+    margin-top: prem(44);
+  }
+}
+
+.textarea-text--mt22 {
+  margin-top: prem(22);
+  @include mq("md") {
+    margin-top: prem(38);
+  }
+}

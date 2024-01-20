@@ -1,0 +1,8 @@
+@use "foundation" as *;
+
+.layout-page-3rd-mv {
+  margin-top: prem(200);
+  @include mq("md") {
+    margin-top: prem(218);
+  }
+}
